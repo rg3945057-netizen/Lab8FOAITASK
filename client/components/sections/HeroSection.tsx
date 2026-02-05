@@ -34,14 +34,16 @@ export default function HeroSection({ onRegisterClick, onScheduleClick }: HeroSe
         <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             size="lg"
-            className="button-primary bg-white text-primary hover:bg-white/90 font-semibold"
+            onClick={onRegisterClick}
+            className="button-primary bg-white text-primary hover:bg-white/90 font-semibold cursor-pointer"
           >
             Register Now
           </Button>
           <Button
             size="lg"
+            onClick={onScheduleClick}
             variant="outline"
-            className="button-secondary border-2 border-white text-white hover:bg-white/10 font-semibold"
+            className="button-secondary border-2 border-white text-white hover:bg-white/10 font-semibold cursor-pointer"
           >
             View Schedule
           </Button>
