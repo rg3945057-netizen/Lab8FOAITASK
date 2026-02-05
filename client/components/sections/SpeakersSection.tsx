@@ -90,7 +90,10 @@ export default function SpeakersSection() {
           <p className="text-lg text-foreground mb-4">
             Want to know more about our speakers?
           </p>
-          <button className="cta-button inline-block px-8 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-colors">
+          <button
+            onClick={() => alert("Full speaker list coming soon! These are our featured speakers for FestSphere 2024.")}
+            className="cta-button inline-block px-8 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-colors cursor-pointer"
+          >
             View Full Speaker List
           </button>
         </div>
