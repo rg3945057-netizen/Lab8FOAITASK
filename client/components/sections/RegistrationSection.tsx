@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-export default function RegistrationSection() {
+interface RegistrationSectionProps {
+  onRegisterClick: () => void;
+}
+
+export default function RegistrationSection({ onRegisterClick }: RegistrationSectionProps) {
   return (
     <section className="registration-section py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary via-purple-500 to-accent">
       <div className="registration-container max-w-4xl mx-auto text-center">
