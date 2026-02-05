@@ -1,7 +1,20 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
-export default function Footer() {
+interface FooterProps {
+  onRegisterClick?: () => void;
+  onScheduleClick?: () => void;
+}
+
+export default function Footer({ onRegisterClick, onScheduleClick }: FooterProps) {
   const currentYear = new Date().getFullYear();
+
+  const handleNavClick = (href: string) => {
+    if (href === "#register" && onRegisterClick) {
+      onRegisterClick();
+    } else if (href === "#schedule" && onScheduleClick) {
+      onScheduleClick();
+    }
+  };
 
   return (
     <footer className="footer bg-foreground text-white">
