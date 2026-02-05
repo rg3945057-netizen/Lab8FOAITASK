@@ -46,7 +46,8 @@ export default function RegistrationSection({ onRegisterClick }: RegistrationSec
           {/* CTA Button */}
           <Button
             size="lg"
-            className="registration-button bg-white text-primary hover:bg-white/90 font-semibold inline-flex items-center gap-2 text-base sm:text-lg"
+            onClick={onRegisterClick}
+            className="registration-button bg-white text-primary hover:bg-white/90 font-semibold inline-flex items-center gap-2 text-base sm:text-lg cursor-pointer"
           >
             Register Now <ArrowRight size={20} />
           </Button>
