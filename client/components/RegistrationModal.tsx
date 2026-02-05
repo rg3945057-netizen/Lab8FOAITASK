@@ -7,7 +7,10 @@ interface RegistrationModalProps {
   onClose: () => void;
 }
 
-export default function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
+export default function RegistrationModal({
+  isOpen,
+  onClose,
+}: RegistrationModalProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,7 +21,9 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -45,7 +50,9 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
       <div className="registration-modal bg-white rounded-xl shadow-2xl max-w-md w-full animate-fade-in">
         {/* Modal Header */}
         <div className="modal-header flex items-center justify-between p-6 border-b border-border">
-          <h2 className="modal-title text-2xl font-bold text-foreground">Register for FestSphere</h2>
+          <h2 className="modal-title text-2xl font-bold text-foreground">
+            Register for FestSphere
+          </h2>
           <button
             onClick={onClose}
             className="close-button p-1 hover:bg-gray-100 rounded-lg transition-colors"
@@ -63,14 +70,21 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                 Registration Successful!
               </h3>
               <p className="success-message text-muted-foreground">
-                Thank you for registering. Check your email for confirmation details.
+                Thank you for registering. Check your email for confirmation
+                details.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="registration-form space-y-4">
+            <form
+              onSubmit={handleSubmit}
+              className="registration-form space-y-4"
+            >
               {/* Name Field */}
               <div className="form-group">
-                <label htmlFor="name" className="form-label block text-sm font-semibold text-foreground mb-2">
+                <label
+                  htmlFor="name"
+                  className="form-label block text-sm font-semibold text-foreground mb-2"
+                >
                   Full Name
                 </label>
                 <input
@@ -87,7 +101,10 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
               {/* Email Field */}
               <div className="form-group">
-                <label htmlFor="email" className="form-label block text-sm font-semibold text-foreground mb-2">
+                <label
+                  htmlFor="email"
+                  className="form-label block text-sm font-semibold text-foreground mb-2"
+                >
                   Email Address
                 </label>
                 <input
@@ -104,7 +121,10 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
               {/* Phone Field */}
               <div className="form-group">
-                <label htmlFor="phone" className="form-label block text-sm font-semibold text-foreground mb-2">
+                <label
+                  htmlFor="phone"
+                  className="form-label block text-sm font-semibold text-foreground mb-2"
+                >
                   Phone Number
                 </label>
                 <input
@@ -121,7 +141,10 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
               {/* College Field */}
               <div className="form-group">
-                <label htmlFor="college" className="form-label block text-sm font-semibold text-foreground mb-2">
+                <label
+                  htmlFor="college"
+                  className="form-label block text-sm font-semibold text-foreground mb-2"
+                >
                   College Name
                 </label>
                 <input
@@ -138,7 +161,10 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
               {/* Year Field */}
               <div className="form-group">
-                <label htmlFor="year" className="form-label block text-sm font-semibold text-foreground mb-2">
+                <label
+                  htmlFor="year"
+                  className="form-label block text-sm font-semibold text-foreground mb-2"
+                >
                   Year of Study
                 </label>
                 <select
@@ -167,7 +193,8 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
               {/* Terms */}
               <p className="form-terms text-xs text-muted-foreground text-center">
-                By registering, you agree to our Terms of Service and Privacy Policy
+                By registering, you agree to our Terms of Service and Privacy
+                Policy
               </p>
             </form>
           )}

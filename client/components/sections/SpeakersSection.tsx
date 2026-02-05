@@ -62,7 +62,8 @@ export default function SpeakersSection() {
             Featured Speakers & Performers
           </h2>
           <p className="speakers-description text-lg text-muted-foreground max-w-2xl mx-auto">
-            Learn from industry leaders, innovators, and creative minds shaping the future. Network with world-class speakers and performers.
+            Learn from industry leaders, innovators, and creative minds shaping
+            the future. Network with world-class speakers and performers.
           </p>
         </div>
 
@@ -74,7 +75,9 @@ export default function SpeakersSection() {
               className="speaker-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-4 cursor-pointer border border-white/80"
             >
               {/* Speaker Avatar */}
-              <div className={`speaker-avatar-wrapper bg-gradient-to-br ${speaker.color} h-48 flex items-center justify-center text-9xl relative overflow-hidden`}>
+              <div
+                className={`speaker-avatar-wrapper bg-gradient-to-br ${speaker.color} h-48 flex items-center justify-center text-9xl relative overflow-hidden`}
+              >
                 <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors" />
                 {speaker.image}
               </div>
@@ -84,7 +87,9 @@ export default function SpeakersSection() {
                 <h3 className="speaker-name text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {speaker.name}
                 </h3>
-                <p className={`speaker-role text-sm font-bold bg-gradient-to-r ${speaker.color} bg-clip-text text-transparent mb-4`}>
+                <p
+                  className={`speaker-role text-sm font-bold bg-gradient-to-r ${speaker.color} bg-clip-text text-transparent mb-4`}
+                >
                   {speaker.role}
                 </p>
                 <p className="speaker-bio text-sm text-muted-foreground leading-relaxed mb-6">
@@ -101,12 +106,19 @@ export default function SpeakersSection() {
         {/* CTA Section */}
         <div className="speakers-cta-wrapper bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-12 border border-primary/10">
           <div className="text-center">
-            <h3 className="text-3xl font-bold text-foreground mb-4">More Speakers Coming Soon</h3>
+            <h3 className="text-3xl font-bold text-foreground mb-4">
+              More Speakers Coming Soon
+            </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We're continuously adding more speakers and performers. Want to know the complete list? Stay tuned for announcements!
+              We're continuously adding more speakers and performers. Want to
+              know the complete list? Stay tuned for announcements!
             </p>
-            <button 
-              onClick={() => alert("Full speaker list and announcements coming soon! More exciting guests will be revealed closer to the fest date.")}
+            <button
+              onClick={() =>
+                alert(
+                  "Full speaker list and announcements coming soon! More exciting guests will be revealed closer to the fest date.",
+                )
+              }
               className="inline-block px-10 py-4 rounded-lg bg-gradient-to-r from-primary to-accent text-white font-bold text-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
             >
               View Full Speaker List

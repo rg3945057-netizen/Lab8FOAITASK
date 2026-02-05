@@ -42,7 +42,7 @@ Be part of the energy and excitement as thousands of students celebrate together
     maxCapacity: 10000,
     schedule: "10:00 AM - 12:00 PM",
     color: "from-purple-600 to-pink-600",
-    icon: "🎭"
+    icon: "🎭",
   },
   {
     id: "tech-talks-ai-ml",
@@ -51,7 +51,8 @@ Be part of the energy and excitement as thousands of students celebrate together
     time: "12:00 PM",
     location: "Auditorium",
     category: "tech",
-    description: "Explore the future of AI and Machine Learning with industry experts",
+    description:
+      "Explore the future of AI and Machine Learning with industry experts",
     fullDescription: `Discover the cutting-edge world of Artificial Intelligence and Machine Learning from industry leaders.
 
 Topics Covered:
@@ -75,7 +76,7 @@ Learn directly from someone building the future of technology!`,
     requirements: "Basic knowledge of programming preferred",
     schedule: "12:00 PM - 2:00 PM",
     color: "from-blue-600 to-cyan-600",
-    icon: "⚡"
+    icon: "⚡",
   },
   {
     id: "gaming-tournament",
@@ -116,12 +117,12 @@ Coaches and pro players will be present. Sign up in teams or find teammates at t
       "All games must be played on provided equipment",
       "No external assistance allowed",
       "Respect all opponents and judges",
-      "All matches are recorded for streaming"
+      "All matches are recorded for streaming",
     ],
     prizes: "₹2,00,000+ prize pool across categories",
     schedule: "2:00 PM - 10:00 PM (Qualifiers), Finals on Day 3",
     color: "from-green-600 to-emerald-600",
-    icon: "🎮"
+    icon: "🎮",
   },
   {
     id: "cultural-night",
@@ -160,7 +161,7 @@ This is the perfect blend of tradition and modernity, showcasing the cultural di
     maxCapacity: 5000,
     schedule: "6:00 PM - 10:00 PM",
     color: "from-red-600 to-orange-600",
-    icon: "🎤"
+    icon: "🎤",
   },
   {
     id: "hackathon",
@@ -217,12 +218,12 @@ This is your chance to build something amazing and get noticed by tech companies
       "Teams must start from scratch during hackathon",
       "No pre-built solutions allowed",
       "Code must be original",
-      "Submission includes code + presentation"
+      "Submission includes code + presentation",
     ],
     prizes: "₹5,00,000 prize pool + Internship opportunities",
     schedule: "Day 2: 9:00 AM - Day 3: 9:00 AM (24 hours)",
     color: "from-indigo-600 to-purple-600",
-    icon: "💻"
+    icon: "💻",
   },
   {
     id: "dance-battle",
@@ -276,7 +277,7 @@ This is your moment to shine and celebrate the power of dance!`,
     requirements: "Dance skills required",
     schedule: "Auditions (Day 1), Semi-finals & Finals (Day 2)",
     color: "from-pink-600 to-rose-600",
-    icon: "💃"
+    icon: "💃",
   },
   {
     id: "startup-pitch",
@@ -337,12 +338,12 @@ This is your platform to launch the next big startup!`,
     rules: [
       "Ideas must be original",
       "Pitch time strictly enforced",
-      "All team members must be present"
+      "All team members must be present",
     ],
     prizes: "₹3,00,000 + Mentorship & Networking opportunities",
     schedule: "Day 2: 3:00 PM - 6:00 PM",
     color: "from-amber-600 to-yellow-600",
-    icon: "🚀"
+    icon: "🚀",
   },
   {
     id: "live-music",
@@ -390,7 +391,7 @@ Bring your friends and experience an evening of great music under the stars!`,
     maxCapacity: 8000,
     schedule: "Day 2: 8:00 PM - 12:00 AM (Midnight)",
     color: "from-violet-600 to-purple-600",
-    icon: "🎸"
+    icon: "🎸",
   },
   {
     id: "esports-finals",
@@ -445,7 +446,7 @@ This is where legends are made! Witness the best gamers compete for glory!`,
     maxCapacity: 2000,
     schedule: "Day 3: 1:00 PM - 11:00 PM",
     color: "from-lime-600 to-green-600",
-    icon: "🏆"
+    icon: "🏆",
   },
   {
     id: "awards-ceremony",
@@ -496,7 +497,7 @@ This is the emotional high point where we celebrate everyone's hard work and ama
     maxCapacity: 10000,
     schedule: "Day 3: 5:00 PM - 8:00 PM",
     color: "from-blue-600 to-indigo-600",
-    icon: "🎖️"
+    icon: "🎖️",
   },
   {
     id: "closing-celebration",
@@ -548,18 +549,18 @@ This is the emotional goodbye, celebration of memories, and start of new friends
     maxCapacity: 15000,
     schedule: "Day 3: 7:00 PM - 1:00 AM (Next day)",
     color: "from-cyan-600 to-blue-600",
-    icon: "🎆"
-  }
+    icon: "🎆",
+  },
 ];
 
 export const getEventById = (id: string): Event | undefined => {
-  return events.find(event => event.id === id);
+  return events.find((event) => event.id === id);
 };
 
 export const getEventsByDay = (day: string): Event[] => {
-  return events.filter(event => event.day === day);
+  return events.filter((event) => event.day === day);
 };
 
 export const getEventsByCategory = (category: string): Event[] => {
-  return events.filter(event => event.category === category);
+  return events.filter((event) => event.category === category);
 };

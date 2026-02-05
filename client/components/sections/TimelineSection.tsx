@@ -35,15 +35,21 @@ export default function TimelineSection() {
             Event Schedule
           </h2>
           <p className="timeline-description text-lg text-muted-foreground max-w-2xl mx-auto">
-            Plan your FestSphere experience with our comprehensive day-wise schedule. Click any event for full details and registration.
+            Plan your FestSphere experience with our comprehensive day-wise
+            schedule. Click any event for full details and registration.
           </p>
         </div>
 
         {/* Timeline Tabs */}
         <div className="timeline-days-tabs flex flex-wrap justify-center gap-4 mb-12">
           {days.map((day) => (
-            <div key={day} className="day-tab bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-6 py-3 border-2 border-primary/20">
-              <span className="text-sm font-semibold text-foreground">{day}</span>
+            <div
+              key={day}
+              className="day-tab bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-6 py-3 border-2 border-primary/20"
+            >
+              <span className="text-sm font-semibold text-foreground">
+                {day}
+              </span>
             </div>
           ))}
         </div>
@@ -56,12 +62,18 @@ export default function TimelineSection() {
               <div key={day} className="timeline-day">
                 {/* Day Header with accent line */}
                 <div className="day-header mb-8 flex items-center gap-4">
-                  <div className={`day-number w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center text-white font-bold text-lg`}>
+                  <div
+                    className={`day-number w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center text-white font-bold text-lg`}
+                  >
                     {dayIndex + 1}
                   </div>
                   <div>
-                    <h3 className="day-title text-3xl font-bold text-foreground">{day}</h3>
-                    <p className="text-muted-foreground text-sm">{dayEvents.length} events scheduled</p>
+                    <h3 className="day-title text-3xl font-bold text-foreground">
+                      {day}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {dayEvents.length} events scheduled
+                    </p>
                   </div>
                   <div className="ml-auto h-1 flex-1 bg-gradient-to-r from-primary via-accent to-transparent rounded-full" />
                 </div>
@@ -78,7 +90,8 @@ export default function TimelineSection() {
                       <div className="event-header flex items-start justify-between mb-4">
                         <div className="event-icon text-4xl">{event.icon}</div>
                         <span className="event-category-badge inline-block px-3 py-1 rounded-full text-xs font-bold bg-white/70 text-gray-700">
-                          {event.category.charAt(0).toUpperCase() + event.category.slice(1)}
+                          {event.category.charAt(0).toUpperCase() +
+                            event.category.slice(1)}
                         </span>
                       </div>
 
@@ -120,19 +133,29 @@ export default function TimelineSection() {
         <div className="timeline-stats mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="stat-item text-center">
-              <div className="stat-number text-4xl font-bold text-primary">{events.length}</div>
-              <div className="stat-label text-muted-foreground">Total Events</div>
+              <div className="stat-number text-4xl font-bold text-primary">
+                {events.length}
+              </div>
+              <div className="stat-label text-muted-foreground">
+                Total Events
+              </div>
             </div>
             <div className="stat-item text-center">
-              <div className="stat-number text-4xl font-bold text-accent">3</div>
+              <div className="stat-number text-4xl font-bold text-accent">
+                3
+              </div>
               <div className="stat-label text-muted-foreground">Days</div>
             </div>
             <div className="stat-item text-center">
-              <div className="stat-number text-4xl font-bold text-secondary">4</div>
+              <div className="stat-number text-4xl font-bold text-secondary">
+                4
+              </div>
               <div className="stat-label text-muted-foreground">Categories</div>
             </div>
             <div className="stat-item text-center">
-              <div className="stat-number text-4xl font-bold text-purple-600">10+</div>
+              <div className="stat-number text-4xl font-bold text-purple-600">
+                10+
+              </div>
               <div className="stat-label text-muted-foreground">Prizes</div>
             </div>
           </div>

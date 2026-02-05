@@ -4,7 +4,8 @@ const eventCategories = [
   {
     id: 1,
     name: "Cultural",
-    description: "Music performances, dance competitions, and cultural showcases",
+    description:
+      "Music performances, dance competitions, and cultural showcases",
     icon: Music,
     color: "from-red-500 to-orange-500",
     bgColor: "from-red-50 to-orange-50",
@@ -31,7 +32,8 @@ const eventCategories = [
   {
     id: 4,
     name: "Workshops",
-    description: "Skill development sessions and interactive learning experiences",
+    description:
+      "Skill development sessions and interactive learning experiences",
     icon: BookOpen,
     color: "from-blue-500 to-cyan-500",
     bgColor: "from-blue-50 to-cyan-50",
@@ -52,7 +54,9 @@ export default function OverviewSection() {
             What to Expect
           </h2>
           <p className="overview-description text-lg text-muted-foreground max-w-2xl mx-auto">
-            FestSphere brings together students from across campus for an incredible celebration of talent, creativity, and innovation. Explore the diverse events and activities.
+            FestSphere brings together students from across campus for an
+            incredible celebration of talent, creativity, and innovation.
+            Explore the diverse events and activities.
           </p>
         </div>
 
@@ -65,7 +69,9 @@ export default function OverviewSection() {
                 key={category.id}
                 className={`category-card bg-gradient-to-br ${category.bgColor} rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center transform hover:-translate-y-3 hover:scale-105 group cursor-pointer border border-white/40`}
               >
-                <div className={`${category.iconBg} icon-wrapper w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`${category.iconBg} icon-wrapper w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                >
                   <IconComponent size={40} />
                 </div>
                 <h3 className="category-name text-xl font-bold text-foreground mb-3">
@@ -84,7 +90,7 @@ export default function OverviewSection() {
           {/* Background decoration */}
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
           <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
-          
+
           <div className="relative z-10">
             <h3 className="highlights-title text-3xl font-bold text-white mb-8 flex items-center gap-3">
               <span className="text-4xl">🎊</span>
@@ -92,31 +98,55 @@ export default function OverviewSection() {
             </h3>
             <div className="highlights-grid grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="highlight-item flex items-start gap-4 group">
-                <div className="highlight-check text-accent font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">✓</div>
+                <div className="highlight-check text-accent font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">
+                  ✓
+                </div>
                 <div>
-                  <p className="highlight-text text-white font-semibold mb-1">3 Days of Celebration</p>
-                  <p className="text-white/60 text-sm">Non-stop entertainment from morning to midnight</p>
+                  <p className="highlight-text text-white font-semibold mb-1">
+                    3 Days of Celebration
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    Non-stop entertainment from morning to midnight
+                  </p>
                 </div>
               </div>
               <div className="highlight-item flex items-start gap-4 group">
-                <div className="highlight-check text-accent font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">✓</div>
+                <div className="highlight-check text-accent font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">
+                  ✓
+                </div>
                 <div>
-                  <p className="highlight-text text-white font-semibold mb-1">50+ Events & Activities</p>
-                  <p className="text-white/60 text-sm">Something for every interest and skill level</p>
+                  <p className="highlight-text text-white font-semibold mb-1">
+                    50+ Events & Activities
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    Something for every interest and skill level
+                  </p>
                 </div>
               </div>
               <div className="highlight-item flex items-start gap-4 group">
-                <div className="highlight-check text-secondary font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">✓</div>
+                <div className="highlight-check text-secondary font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">
+                  ✓
+                </div>
                 <div>
-                  <p className="highlight-text text-white font-semibold mb-1">International Performers</p>
-                  <p className="text-white/60 text-sm">World-class speakers, artists, and performers</p>
+                  <p className="highlight-text text-white font-semibold mb-1">
+                    International Performers
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    World-class speakers, artists, and performers
+                  </p>
                 </div>
               </div>
               <div className="highlight-item flex items-start gap-4 group">
-                <div className="highlight-check text-secondary font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">✓</div>
+                <div className="highlight-check text-secondary font-bold text-2xl flex-shrink-0 group-hover:scale-125 transition-transform">
+                  ✓
+                </div>
                 <div>
-                  <p className="highlight-text text-white font-semibold mb-1">Exclusive Prizes</p>
-                  <p className="text-white/60 text-sm">₹10+ Lakhs in prizes and giveaways</p>
+                  <p className="highlight-text text-white font-semibold mb-1">
+                    Exclusive Prizes
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    ₹10+ Lakhs in prizes and giveaways
+                  </p>
                 </div>
               </div>
             </div>

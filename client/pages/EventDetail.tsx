@@ -13,8 +13,13 @@ export default function EventDetail() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-4xl font-bold mb-4">Event Not Found</h1>
-          <p className="text-xl text-gray-300 mb-6">The event you're looking for doesn't exist.</p>
-          <Button onClick={() => navigate("/")} className="bg-primary hover:bg-primary/90">
+          <p className="text-xl text-gray-300 mb-6">
+            The event you're looking for doesn't exist.
+          </p>
+          <Button
+            onClick={() => navigate("/")}
+            className="bg-primary hover:bg-primary/90"
+          >
             Back to Home
           </Button>
         </div>
@@ -30,12 +35,16 @@ export default function EventDetail() {
     ceremony: "from-indigo-600 to-purple-600",
   };
 
-  const relatedEvents = events.filter(e => e.category === event.category && e.id !== event.id).slice(0, 3);
+  const relatedEvents = events
+    .filter((e) => e.category === event.category && e.id !== event.id)
+    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Background */}
-      <div className={`bg-gradient-to-r ${event.color} relative overflow-hidden py-12`}>
+      <div
+        className={`bg-gradient-to-r ${event.color} relative overflow-hidden py-12`}
+      >
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 right-20 w-40 h-40 rounded-full bg-white blur-2xl animate-pulse" />
           <div className="absolute bottom-10 left-20 w-32 h-32 rounded-full bg-white blur-2xl animate-pulse" />
@@ -85,7 +94,9 @@ export default function EventDetail() {
                 <Users className="text-secondary" size={24} />
                 <span className="text-sm text-muted-foreground">Capacity</span>
               </div>
-              <p className="font-semibold text-foreground">{event.maxCapacity} people</p>
+              <p className="font-semibold text-foreground">
+                {event.maxCapacity} people
+              </p>
             </div>
           )}
           {event.prizes && (
@@ -107,7 +118,9 @@ export default function EventDetail() {
           <div className="lg:col-span-2">
             {/* Full Description */}
             <div className="event-full-description bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-6">About This Event</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">
+                About This Event
+              </h2>
               <div className="prose prose-lg max-w-none text-foreground leading-relaxed whitespace-pre-line">
                 {event.fullDescription}
               </div>
@@ -129,7 +142,9 @@ export default function EventDetail() {
                 )}
                 {event.rules && (
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">Rules & Guidelines</h3>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                      Rules & Guidelines
+                    </h3>
                     <ul className="space-y-3">
                       {event.rules.map((rule, idx) => (
                         <li key={idx} className="flex items-start gap-3">
@@ -162,25 +177,41 @@ export default function EventDetail() {
 
             {/* Event Details Card */}
             <div className="event-details-card bg-white rounded-xl shadow-lg p-6 mt-6">
-              <h4 className="text-xl font-bold text-foreground mb-4">Event Details</h4>
+              <h4 className="text-xl font-bold text-foreground mb-4">
+                Event Details
+              </h4>
               <div className="space-y-4">
                 <div className="detail-item">
-                  <span className="text-sm text-muted-foreground">Organizer</span>
-                  <p className="font-semibold text-foreground">{event.organizer}</p>
+                  <span className="text-sm text-muted-foreground">
+                    Organizer
+                  </span>
+                  <p className="font-semibold text-foreground">
+                    {event.organizer}
+                  </p>
                 </div>
                 <div className="detail-item">
-                  <span className="text-sm text-muted-foreground">Schedule</span>
-                  <p className="font-semibold text-foreground">{event.schedule}</p>
+                  <span className="text-sm text-muted-foreground">
+                    Schedule
+                  </span>
+                  <p className="font-semibold text-foreground">
+                    {event.schedule}
+                  </p>
                 </div>
                 {event.participants && (
                   <div className="detail-item">
-                    <span className="text-sm text-muted-foreground">Expected Participants</span>
-                    <p className="font-semibold text-foreground">{event.participants.toLocaleString()}</p>
+                    <span className="text-sm text-muted-foreground">
+                      Expected Participants
+                    </span>
+                    <p className="font-semibold text-foreground">
+                      {event.participants.toLocaleString()}
+                    </p>
                   </div>
                 )}
                 {event.prizes && (
                   <div className="detail-item border-t pt-4">
-                    <span className="text-sm text-muted-foreground">Prizes</span>
+                    <span className="text-sm text-muted-foreground">
+                      Prizes
+                    </span>
                     <p className="font-semibold text-accent">{event.prizes}</p>
                   </div>
                 )}
@@ -189,7 +220,9 @@ export default function EventDetail() {
 
             {/* Share Card */}
             <div className="share-card bg-white rounded-xl shadow-lg p-6 mt-6">
-              <h4 className="text-xl font-bold text-foreground mb-4">Share Event</h4>
+              <h4 className="text-xl font-bold text-foreground mb-4">
+                Share Event
+              </h4>
               <div className="flex gap-3">
                 <button className="share-button flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition-colors">
                   Facebook
@@ -208,7 +241,9 @@ export default function EventDetail() {
         {/* Related Events */}
         {relatedEvents.length > 0 && (
           <div className="related-events mt-16">
-            <h2 className="text-3xl font-bold text-foreground mb-8">Similar Events</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-8">
+              Similar Events
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedEvents.map((relatedEvent) => (
                 <button
@@ -216,12 +251,18 @@ export default function EventDetail() {
                   onClick={() => navigate(`/event/${relatedEvent.id}`)}
                   className="related-event-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-left cursor-pointer"
                 >
-                  <div className={`bg-gradient-to-r ${relatedEvent.color} h-32 flex items-center justify-center text-5xl`}>
+                  <div
+                    className={`bg-gradient-to-r ${relatedEvent.color} h-32 flex items-center justify-center text-5xl`}
+                  >
                     {relatedEvent.icon}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-foreground mb-2">{relatedEvent.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">{relatedEvent.description}</p>
+                    <h3 className="text-lg font-bold text-foreground mb-2">
+                      {relatedEvent.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {relatedEvent.description}
+                    </p>
                     <div className="flex items-center gap-2 text-sm text-primary font-semibold">
                       View Details →
                     </div>
