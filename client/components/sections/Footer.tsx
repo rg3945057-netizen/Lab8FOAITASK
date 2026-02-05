@@ -35,24 +35,30 @@ export default function Footer({ onRegisterClick, onScheduleClick }: FooterProps
               <h4 className="footer-section-title font-semibold mb-4">Quick Links</h4>
               <ul className="footer-link-list space-y-2">
                 <li>
-                  <a href="#" className="footer-link text-white/70 hover:text-white transition-colors">
+                  <a href="#home" className="footer-link text-white/70 hover:text-white transition-colors cursor-pointer">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="footer-link text-white/70 hover:text-white transition-colors">
+                  <button
+                    onClick={() => handleNavClick("#schedule")}
+                    className="footer-link text-white/70 hover:text-white transition-colors cursor-pointer bg-none border-none text-left"
+                  >
                     Schedule
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="footer-link text-white/70 hover:text-white transition-colors">
+                  <a href="#speakers" className="footer-link text-white/70 hover:text-white transition-colors cursor-pointer">
                     Speakers
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="footer-link text-white/70 hover:text-white transition-colors">
+                  <button
+                    onClick={() => handleNavClick("#register")}
+                    className="footer-link text-white/70 hover:text-white transition-colors cursor-pointer bg-none border-none text-left"
+                  >
                     Register
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
