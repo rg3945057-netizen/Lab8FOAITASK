@@ -41,7 +41,10 @@ export default function Index() {
       </div>
       <SpeakersSection />
       <RegistrationSection onRegisterClick={openRegistration} />
-      <Footer />
+      <Footer
+        onRegisterClick={openRegistration}
+        onScheduleClick={() => scrollToSection(timelineRef)}
+      />
 
       <RegistrationModal
         isOpen={isRegistrationModalOpen}
