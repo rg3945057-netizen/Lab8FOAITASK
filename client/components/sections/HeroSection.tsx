@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onRegisterClick: () => void;
+  onScheduleClick: () => void;
+}
+
+export default function HeroSection({ onRegisterClick, onScheduleClick }: HeroSectionProps) {
   return (
     <section className="hero-section relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-primary via-blue-600 to-accent flex items-center justify-center">
       {/* Background gradient overlay */}
